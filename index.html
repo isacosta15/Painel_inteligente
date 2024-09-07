@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Alzheimer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Cuidados de Alzheimer - Painel Inteligente</h1>
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar artigos, cuidados..." />
+            <button id="search-button">Pesquisar</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="articles-section">
+            <h2>Artigos Relevantes</h2>
+            <div id="articles-list"></div>
+        </section>
+
+        <section id="custom-care-project">
+            <h2>Projetos de Cuidado Personalizados</h2>
+            <form id="care-project-form">
+                <label for="task-name">Tarefa:</label>
+                <input type="text" id="task-name" placeholder="Ex: Lembrar de tomar medicamento" />
+
+                <label for="task-frequency">Frequência:</label>
+                <select id="task-frequency">
+                    <option value="diária">Diária</option>
+                    <option value="semanal">Semanal</option>
+                    <option value="mensal">Mensal</option>
+                </select>
+
+                <button type="submit">Criar Projeto de Cuidado</button>
+            </form>
+            <ul id="care-projects-list"></ul>
+        </section>
+
+        <section id="symptoms-chart">
+            <h2>Monitoramento de Sintomas</h2>
+            <canvas id="symptomsCanvas"></canvas>
+        </section>
+
+        <!-- Chatbot Section -->
+        <section id="chatbot-section">
+            <h2>Assistente Virtual - Alzheimer</h2>
+            <div id="chatbox">
+                <div id="chat-log"></div>
+                <input type="text" id="user-input" placeholder="Digite sua pergunta..." />
+                <button id="send-button">Enviar</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+    <script src="dados.js"></script>
+</body>
+</html>
